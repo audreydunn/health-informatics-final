@@ -45,7 +45,7 @@ function App() {
       const accountInfo = accountsMap.get(username);
 
       if (accountInfo) {
-        const [storedPassword, patientArray] = accountInfo;
+        const [storedPassword] = accountInfo;
 
         if (storedPassword === password) {
           setLoggedAccount(username);

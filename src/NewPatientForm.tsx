@@ -75,7 +75,7 @@ const NewPatientForm: React.FC = () => {
       accountInfo[1].push(data);
     }
 
-    navigate('/login');
+    navigate('/cs6440-final-project/login');
   }
 
   return (

@@ -37,7 +37,7 @@ const PatientsList: React.FC = () => {
 
   const handleAddNewPatient = () => {
     //alert('Add New Patient button clicked');
-    navigate('/add-patient');
+    navigate('/cs6440-final-project/add-patient');
   };
 
   const accountInfo = accountsMap.get(loggedAccount);
@@ -61,7 +61,7 @@ const PatientsList: React.FC = () => {
       <div className="patient-list">
         {patientArray.map((patient) => (
           <div key={patient.Id} style={{ padding: '10px', borderBottom: '1px solid #eee' }}>
-            <Link to={`/patient`} state={{ patient }} style={{ width: '100%', textAlign: 'left', display: 'block', padding: '5px' }}>
+            <Link to={`/cs6440-final-project/patient`} state={{ patient }} style={{ width: '100%', textAlign: 'left', display: 'block', padding: '5px' }}>
                  <p>Patient Name: {patient.FIRST.concat(" ", patient.LAST)}</p>
                  <p>Age: {calculateAge(patient.BIRTHDATE)}</p>
                  <p>Gender: {patient.GENDER}</p>

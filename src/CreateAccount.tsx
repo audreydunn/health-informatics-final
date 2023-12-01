@@ -51,12 +51,12 @@ const CreateAccount: React.FC = () => {
         const patientsData:PatientData[] = []
         setAccountsMap(new Map(accountsMap.set(username, [password, patientsData])));
 
-        navigate('/');
+        navigate('/cs6440-final-project/');
     }
   };
 
   const handleCancel = () => {
-    navigate('/');
+    navigate('/cs6440-final-project/');
   };
 
   return (
