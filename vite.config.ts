@@ -4,8 +4,8 @@ import dsv from '@rollup/plugin-dsv'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dsv()],
-  base: "/cs6440-final-project"
+  base: "/cs6440-final-project/",
+  plugins: [react()],
 })
 
 
