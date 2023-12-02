@@ -40,6 +40,11 @@ const PatientsList: React.FC = () => {
     navigate('/cs6440-final-project/add-patient');
   };
 
+  const handleLogout = () => {
+    navigate('/cs6440-final-project/');
+    window.location.reload();
+  };
+
   const accountInfo = accountsMap.get(loggedAccount);
   const [patientArray, setPatientArray] = useState<PatientData[]>([]);
 
@@ -72,6 +77,9 @@ const PatientsList: React.FC = () => {
       <button onClick={handleAddNewPatient} style={{ marginTop: '10px' }}>
         Add New Patient
       </button>
+      <div style={{position: "fixed", top: "0", right: "0"}}>
+        <button style={{margin: "10px", backgroundColor: "#4CAF50"}} onClick={handleLogout}>Logout</button>
+      </div>
     </div>
   );
 };

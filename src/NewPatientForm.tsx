@@ -78,6 +78,15 @@ const NewPatientForm: React.FC = () => {
     navigate('/cs6440-final-project/login');
   }
 
+  const handleLogout = () => {
+    navigate('/cs6440-final-project/');
+    window.location.reload();
+  };
+
+  const handleReturn = () => {
+    navigate('/cs6440-final-project/login');
+  };
+
   return (
     <div style={{
         position: "relative",
@@ -100,6 +109,12 @@ const NewPatientForm: React.FC = () => {
             <button type="submit">{isLastStep ? "Finish" : "Next"}</button>
         </div>
       </form>
+      <div style={{position: "fixed", top: "0", right: "0"}}>
+        <button style={{margin: "10px", backgroundColor: "#4CAF50"}} onClick={handleLogout}>Logout</button>
+      </div>
+      <div style={{position: "fixed", top: "0", left: "0"}}>
+        <button style={{margin: "10px", backgroundColor: "#4CAF50"}} onClick={handleReturn}>Homepage</button>
+      </div>
     </div>
   );
 };

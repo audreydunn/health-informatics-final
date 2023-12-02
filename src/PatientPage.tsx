@@ -1,12 +1,28 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const PatientPage: React.FC = () => {
   const location = useLocation();
   const patient = location.state?.patient;
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/cs6440-final-project/');
+    window.location.reload();
+  };
+
+  const handleReturn = () => {
+    navigate('/cs6440-final-project/login');
+  };
 
   return (
     <div>
+      <div style={{position: "fixed", top: "0", right: "0"}}>
+        <button style={{margin: "10px", backgroundColor: "#4CAF50"}} onClick={handleLogout}>Logout</button>
+      </div>
+      <div style={{position: "fixed", top: "0", left: "0"}}>
+        <button style={{margin: "10px", backgroundColor: "#4CAF50"}} onClick={handleReturn}>Homepage</button>
+      </div>
       <h1>Patient Information</h1>
       <p>Patient ID: {patient?.Id}</p>
       <p>Birth Date: {patient?.BIRTHDATE}</p>
