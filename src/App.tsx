@@ -59,7 +59,7 @@ function App() {
 
   return (
     <AccountsMapContext.Provider value={{ accountsMap, setAccountsMap, loggedAccount }}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes>
           <Route path='/cs6440-final-project/add-patient' element={isAuthenticated ? <NewPatientForm /> : <LoginPage onLogin={handleLogin} />} />
           <Route path="/cs6440-final-project/create-account" element={<CreateAccount />} />
