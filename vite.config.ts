@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/cs6440-final-project/",
   plugins: [react()],
+  base: "/cs6440-final-project/",
 })
 
 
