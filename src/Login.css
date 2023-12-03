@@ -1,15 +1,29 @@
-/* Login.css */
-
 body {
   display: flex;
   justify-content: center;
-  align-items: left; /* This will center the form vertically as well */
-  min-height: 100vh; /* Use at least the full height of the viewport */
-  margin: 0; /* Reset default margin */
+  align-items: left; 
+  min-height: 100vh; 
+  margin: 0; 
   margin-top: -1px;
-  background-color: #5f6ec5; /* Or any other color you prefer */
+  background-color: #5f6ec5; 
   color: #000000;
   flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+  background-color: #167947;
 }
 
 .login-container {
@@ -17,20 +31,20 @@ body {
   }
 
 .login-form {
-    display: block; /* or 'inline-block' if the form is inside a flex or grid container */
-    margin: auto; /* this will center the form horizontally */
+    display: block; 
+    margin: auto; 
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #1b1a1a;
-    width: 200px; /* Or a specific width like 300px */
+    width: 200px; 
     color: #ffffff;
   }
 
 .login-form button {
-    display: block; /* Make the button a block element */
-    width: 100%; /* Set the button width to occupy the full container width */
+    display: block; 
+    width: 100%; 
     padding: 10px 15px;
     color: white;
     background-color: #4CAF50;
@@ -38,20 +52,18 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    margin-top: 10px; /* Add some space above the button */
+    margin-top: 10px; 
   }
   
 .login-form button:hover {
     background-color: #45a049da;
   }
 
-  
-/* Additional styles for error messages */
 .error-message {
     color: red;
     font-size: 0.9em;
     font-weight: bold;
-    margin-top: 0px; /* To reduce space between the input and error message */
-    margin-bottom: 10px; /* To keep consistent spacing after the error message */
+    margin-top: 0px; 
+    margin-bottom: 10px; 
     margin-right: -25px;
   }
