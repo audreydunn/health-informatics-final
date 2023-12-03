@@ -75,16 +75,16 @@ const NewPatientForm: React.FC = () => {
       accountInfo[1].push(data);
     }
 
-    navigate('/cs6440-final-project/login');
+    navigate('/login');
   }
 
   const handleLogout = () => {
-    navigate('/cs6440-final-project/');
+    navigate('/');
     window.location.reload();
   };
 
   const handleReturn = () => {
-    navigate('/cs6440-final-project/login');
+    navigate('/login');
   };
 
   return (

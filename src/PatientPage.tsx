@@ -7,12 +7,12 @@ const PatientPage: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate('/cs6440-final-project/');
+    navigate('/');
     window.location.reload();
   };
 
   const handleReturn = () => {
-    navigate('/cs6440-final-project/login');
+    navigate('/login');
   };
 
   return (

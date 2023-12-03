@@ -39,7 +39,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
 
   const handleCreateAccount = () => {
     // Route to the "create new account" page
-    navigate('/cs6440-final-project/create-account');
+    navigate('/create-account');
   };
 
   return (

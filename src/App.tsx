@@ -61,11 +61,11 @@ function App() {
     <AccountsMapContext.Provider value={{ accountsMap, setAccountsMap, loggedAccount }}>
       <Router>
         <Routes>
-          <Route path='/cs6440-final-project/add-patient' element={isAuthenticated ? <NewPatientForm /> : <LoginPage onLogin={handleLogin} />} />
-          <Route path="/cs6440-final-project/create-account" element={<CreateAccount />} />
-          <Route path='/cs6440-final-project/patient' element={isAuthenticated ? <PatientPage /> : <LoginPage onLogin={handleLogin} />} />
-          <Route path='/cs6440-final-project/login' element={isAuthenticated ? <PatientsList /> : <LoginPage onLogin={handleLogin} />} />
-          <Route path='/cs6440-final-project' element={isAuthenticated ? <PatientsList /> : <LoginPage onLogin={handleLogin} />} />
+          <Route path='/add-patient' element={isAuthenticated ? <NewPatientForm /> : <LoginPage onLogin={handleLogin} />} />
+          <Route path="/create-account" element={<CreateAccount />} />
+          <Route path='/patient' element={isAuthenticated ? <PatientPage /> : <LoginPage onLogin={handleLogin} />} />
+          <Route path='/login' element={isAuthenticated ? <PatientsList /> : <LoginPage onLogin={handleLogin} />} />
+          <Route path='/' element={isAuthenticated ? <PatientsList /> : <LoginPage onLogin={handleLogin} />} />
         </Routes>
       </Router>
     </AccountsMapContext.Provider>
